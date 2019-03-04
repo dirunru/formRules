@@ -7,7 +7,7 @@ export function isDecimal(rule, value, callback) {
       if (!Number(value)) {
         callback(new Error('请输入数字'));
       } else {
-        if (!/[a-zA-Z0-9_]{6,18}$/.test(value)) {
+        if (!/^[a-zA-Z0-9_]{6,18}$/.test(value)) {
           callback(new Error('输入密码格式不正确'));
         } else {
           callback();
