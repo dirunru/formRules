@@ -1,17 +1,34 @@
-/* 是否是公司邮箱*/
-export function isDecimal(rule, value, callback) {
-    if (!value) {
-      return callback(new Error('输入不可以为空'));
-    }
+/* 验证密码*/
+export function isPassword(rule, value, callback) {
+  if (value) {
     setTimeout(() => {
       if (!Number(value)) {
         callback(new Error('请输入数字'));
       } else {
-        if (!/^[a-zA-Z0-9_]{6,18}$/.test(value)) {
-          callback(new Error('输入密码格式不正确'));
+        if (!/[a-zA-Z0-9_]{6,18}$/.test(value)) {
+          callback(new Error('输入密码长度在6~18之间,只能包含字母、数字和下划线 !'));
         } else {
           callback();
         }
       }
     }, 100);
+  }
 }
+// 验证手机号码
+export function isPhone_num(rule, value, callback) {
+  if (value) {
+    setTimeout(() => {
+      if (!Number(value)) {
+        callback(new Error('请输入数字'));
+      } else {
+        if (!(/^1[34578]\d{9}$/.test(value))) {
+          callback(new Error('请输入正确的手机号码'));
+        } else {
+          callback();
+        }
+      }
+    }, 100);
+  }
+}
+// 验证邮箱
+
