@@ -36,9 +36,13 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     new UglifyJsPlugin({
       uglifyOptions: {
+        comments: false,//删除多余的注释
+        beautify:false,//最紧凑的输出
         compress: {
-          warnings: false
-        }
+          warnings: false, //删除没有用到的代码不发出警告
+          drop_console:true,//删除所有的console语句
+          drop_debugger:true //删除所有的debugger
+        },
       },
       sourceMap: config.build.productionSourceMap,
       parallel: true

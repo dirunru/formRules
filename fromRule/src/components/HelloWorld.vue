@@ -120,8 +120,12 @@
         }
       };
     },
+    created(){
+      
+    },
     methods: {
       submitForm(formName) {
+        console.warn = ()=>{};
         this.$refs[formName].validate((valid) => {
           if (valid) {
             console.log("ok");
