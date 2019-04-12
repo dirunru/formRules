@@ -14,7 +14,7 @@
         <el-form-item label="电话" prop="phone_num">
           <el-input v-model="ruleForm2.phone_num" autocomplete="off"></el-input>
         </el-form-item>
-        <el-form-item label="活动性质" prop="type">
+        <el-form-item label="活动性质" prop="type" required >
           <el-checkbox-group v-model="ruleForm2.type">
             <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
             <el-checkbox label="地推活动" name="type"></el-checkbox>
@@ -45,9 +45,6 @@
     isPassword,
     isPhone_num
   } from "../utils/validate.js"
-  import {
-    constants
-  } from 'fs';
   export default {
     data() {
       return {
@@ -124,7 +121,7 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            console.log("ok");
+            console.log(this.ruleForm2);
           } else {
             return false;
           }
