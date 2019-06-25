@@ -1,41 +1,66 @@
 <template>
   <div>
     <div class="hello">
-      <el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
-        <el-form-item label="姓名" prop="username">
-          <el-input v-model="ruleForm2.username" autocomplete="off"></el-input>
+      <el-form :model="ruleForm2"
+               status-icon
+               :rules="rules2"
+               ref="ruleForm2"
+               label-width="100px"
+               class="demo-ruleForm">
+        <el-form-item label="姓名"
+                      prop="username">
+          <el-input v-model="ruleForm2.username"
+                    autocomplete="off"></el-input>
         </el-form-item>
-        <el-form-item label="密码" prop="password">
-          <el-input v-model="ruleForm2.password" autocomplete="off"></el-input>
+        <el-form-item label="密码"
+                      prop="password">
+          <el-input v-model="ruleForm2.password"
+                    autocomplete="off"></el-input>
         </el-form-item>
-        <el-form-item label="E-mail" prop="email">
-          <el-input v-model="ruleForm2.email" autocomplete="off"></el-input>
+        <el-form-item label="E-mail"
+                      prop="email">
+          <el-input v-model="ruleForm2.email"
+                    autocomplete="off"></el-input>
         </el-form-item>
-        <el-form-item label="电话" prop="phone_num">
-          <el-input v-model="ruleForm2.phone_num" autocomplete="off"></el-input>
+        <el-form-item label="电话"
+                      prop="phone_num">
+          <el-input v-model="ruleForm2.phone_num"
+                    autocomplete="off"></el-input>
         </el-form-item>
-        <el-form-item label="活动性质" prop="type" required >
+        <el-form-item label="活动性质"
+                      prop="type"
+                      required>
           <el-checkbox-group v-model="ruleForm2.type">
-            <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
-            <el-checkbox label="地推活动" name="type"></el-checkbox>
-            <el-checkbox label="线下主题活动" name="type"></el-checkbox>
-            <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
+            <el-checkbox label="美食/餐厅线上活动"
+                         name="type"></el-checkbox>
+            <el-checkbox label="地推活动"
+                         name="type"></el-checkbox>
+            <el-checkbox label="线下主题活动"
+                         name="type"></el-checkbox>
+            <el-checkbox label="单纯品牌曝光"
+                         name="type"></el-checkbox>
           </el-checkbox-group>
         </el-form-item>
-        <el-form-item label="特殊资源" prop="resource">
+        <el-form-item label="特殊资源"
+                      prop="resource">
           <el-radio-group v-model="ruleForm2.resource">
             <el-radio label="线上品牌商赞助"></el-radio>
             <el-radio label="线下场地免费"></el-radio>
           </el-radio-group>
         </el-form-item>
-        <el-form-item label="活动形式" prop="desc">
-          <el-input type="textarea" v-model="ruleForm2.desc"></el-input>
+        <el-form-item label="活动形式"
+                      prop="desc">
+          <el-input type="textarea"
+                    v-model="ruleForm2.desc"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="submitForm('ruleForm2')">提交</el-button>
+          <el-button type="primary"
+                     @click="submitForm('ruleForm2')">提交</el-button>
           <el-button @click="resetForm('ruleForm2')">重置</el-button>
         </el-form-item>
       </el-form>
+      <div class="iconfont iconcaidan"></div>
+      <div class="fa fa-search-plus"></div>
     </div>
   </div>
 </template>
@@ -141,8 +166,7 @@
 </script>
 
 <style lang='scss' scoped>
-  .hello {
-    width: 40%;
-  }
-
+.hello {
+  width: 40%;
+}
 </style>
